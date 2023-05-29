@@ -5,10 +5,6 @@ rem -- Change to the directory of the executing batch file
 cd "%~dp0"
 @echo off
 
-rem call "%~dp0\01_install_subl.bat"
-
-
-
 rem "Setting config"
 
 robocopy "%~dp0\03_APPDATA" %APPDATA% /s /XF desktop.ini
@@ -21,8 +17,8 @@ call "%~dp0\05_setPATH.bat"
 
 rd /s /q "%temp%"
 
-
-rem call "%~dp0\02_install_msys2.bat"
+call "%~dp0\01_install_subl.bat"
+call "%~dp0\02_install_msys2.bat"
 
 endlocal
 echo "Done"
