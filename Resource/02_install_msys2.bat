@@ -6,22 +6,22 @@
 set MSYS2_INSTALLER=msys2-x86_64-20230526.exe
 set MSYS2_INSTALL_DIR="C:\msys2"
 
-if exist "%MSYS2_INSTALL_DIR%" (
-	echo removing: %MSYS2_INSTALL_DIR%
-    rd /s /q "%MSYS2_INSTALL_DIR%"
-    if exist "%MSYS2_INSTALL_DIR%" (
-        echo Failed to remove %MSYS2_INSTALL_DIR%. Please make sure the directory is not in use.
-        pause
-        exit /b 1
-    )
-) else (
-	echo directory does not exist: %MSYS2_INSTALL_DIR%
-)
+rem if exist "%MSYS2_INSTALL_DIR%" (
+rem 	echo removing: %MSYS2_INSTALL_DIR%
+rem     rd /s /q "%MSYS2_INSTALL_DIR%"
+rem     if exist "%MSYS2_INSTALL_DIR%" (
+rem         echo Failed to remove %MSYS2_INSTALL_DIR%. Please make sure the directory is not in use.
+rem         pause
+rem         exit /b 1
+rem     )
+rem ) else (
+rem 	echo directory does not exist: %MSYS2_INSTALL_DIR%
+rem )
 
 if exist "%~dp0\%MSYS2_INSTALLER%" (
     echo File exists: %~dp0%MSYS2_INSTALLER%
 	echo Installing MSYS2 silently...
-	%~dp0%MSYS2_INSTALLER% install --root %MSYS2_INSTALL_DIR% --confirm-command
+	"%~dp0%MSYS2_INSTALLER%" install --root %MSYS2_INSTALL_DIR% --confirm-command
 
 	echo Updating MSYS2 packages...
 	%MSYS2_INSTALL_DIR%\msys2_shell.cmd -defterm -no-start -mingw64 -lc "pacman -Syu --noconfirm"

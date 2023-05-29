@@ -7,7 +7,7 @@ cd "%~dp0"
 
 call "%~dp0\01_install_subl.bat"
 
-call "%~dp0\02_install_msys2.bat"
+
 
 rem "Setting config"
 
@@ -19,8 +19,12 @@ rem "Add PATH"
 echo Configuring Windows PATH...
 call "%~dp0\05_setPATH.bat"
 
-endlocal
+rd /s /q "%temp%"
 
+
+call "%~dp0\02_install_msys2.bat"
+
+endlocal
 echo "Done"
 pause
 exit /b 0
