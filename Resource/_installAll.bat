@@ -7,17 +7,17 @@ cd "%~dp0"
 
 call "%~dp0\01_install_msys2.bat"
 
-rem call "%~dp0\02_install_subl.bat"
+call "%~dp0\02_install_subl.bat"
 
-rem rem "Setting config"
+rem "Setting config"
 
-rem robocopy "%~dp0\03_APPDATA\" %APPDATA% /s /XF desktop.ini
-rem robocopy "%~dp0\04_bin_folder" c:\ /s /XF desktop.ini
+robocopy "%~dp0\03_APPDATA\" %APPDATA% /s /XF desktop.ini
+robocopy "%~dp0\04_bin_folder" c:\ /s /XF desktop.ini
 
-rem rem "Add PATH"
+rem "Add PATH"
 
-rem echo Configuring Windows PATH...
-rem call "%~dp0\05_setPATH.bat"
+echo Configuring Windows PATH...
+call "%~dp0\05_setPATH.bat"
 
 endlocal
 
