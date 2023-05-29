@@ -17,7 +17,7 @@ if exist "%MSYS2_INSTALL_DIR%" (
 ) else (
 	echo directory does not exist: %MSYS2_INSTALL_DIR%
 )
-pause
+
 if exist "%~dp0\%MSYS2_INSTALLER%" (
     echo File exists: %~dp0%MSYS2_INSTALLER%
 	echo Installing MSYS2 silently...
