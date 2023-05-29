@@ -5,9 +5,9 @@ rem -- Change to the directory of the executing batch file
 cd "%~dp0"
 @echo off
 
-call "%~dp0\01_install_msys2.bat"
+call "%~dp0\01_install_subl.bat"
 
-call "%~dp0\02_install_subl.bat"
+call "%~dp0\02_install_msys2.bat"
 
 rem "Setting config"
 
