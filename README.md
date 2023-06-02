@@ -1,4 +1,4 @@
-# bat installation script for comp o camp I using mingw and sublime text
+# potential bat installation script for POSN's computer olympiad camp I using mingw and sublime text
 - click on the link: https://github.com/kittipitch/camp1_01_win_env/archive/refs/heads/main.zip
 - unzip it
 - run "01_startInstall (Run as Administrator).bat as an admin"
